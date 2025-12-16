@@ -45,6 +45,7 @@ app.use(express.json());
 // app.use(morgan('tiny'))
 app.use(morgan(':method :url :status :response-time ms :body'))
 app.use(cors())
+app.use(express.static('dist'))
 
 app.get("/info", (request, response) => {
   const now = new Date();
